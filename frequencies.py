@@ -3,5 +3,11 @@
 
 def frequencies(items):
     frequencies = {}
-    # Your code goes here
+    for key in items:
+        try:
+            if frequencies[key]:
+                frequencies[key] += 1
+        except KeyError:
+            frequencies[key] = 1
+
     return frequencies
